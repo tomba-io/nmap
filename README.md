@@ -26,14 +26,18 @@ Copy the **tomba.nse** to your Nmap program directory/scripts.
 with args:
 
 ```bash
-nmap -sV tomba <target> --script-args 'tomba.key=ta_xxxx,tomba.secret=ts_xxxx'
+nmap --script tomba <target> --script-args 'tomba.key=ta_xxxx,tomba.secret=ts_xxxx'
 ````
 
 or Set your Tomba API key and secret on the **file tomba.nse** to avoid typing it in every time
 
 ```bash
-nmap -sV tomba <target>
+nmap --script tomba <target>
 ```
+
+### How to Use
+
+![Response](response.svg)
 
 ### Parameters
 
