@@ -21,8 +21,8 @@ You can get a free key from https://app.tomba.io/auth/register.
 
 ---
 -- @usage
--- nmap sV tomba <target> --script-args 'tomba.key=ta_xxxx,tomba.secret=ts_xxxx'
--- nmap sV tomba <target>
+-- nmap --script tomba <target> --script-args 'tomba.key=ta_xxxx,tomba.secret=ts_xxxx'
+-- nmap --script tomba <target>
 --
 -- @args tomba.key     Tomba api key.
 -- @args tomba.secret  Tomba api secret.
@@ -100,7 +100,7 @@ local fetch_counter = function(host)
     end
     local options = {header = {}}
     options["header"]["Content-Type"] = "application/json"
-    options["header"]["User-Agent"] = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20120101 Firefox/33.0"
+    options["header"]["User-Agent"] = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"
     options["header"]["X-Tomba-Key"] = key
     options["header"]["X-Tomba-Secret"] = secret
 
